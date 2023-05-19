@@ -2324,11 +2324,15 @@ PrefabInstance:
     - target: {fileID: 1813875788451698800, guid: b160429f0fd26554ba12035d65a27355, type: 3}
       propertyPath: m_Avatar
       value: 
-      objectReference: {fileID: 9000000, guid: 9b921426277dad9488dccdf1e2d1183d, type: 3}
+      objectReference: {fileID: 9000000, guid: 317a56890b5c8e74ab1d492a2c7fb608, type: 3}
     - target: {fileID: 1813875788451698800, guid: b160429f0fd26554ba12035d65a27355, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: e4adbfa83eb95ed44b060f030135a1a1, type: 2}
+      objectReference: {fileID: 9100000, guid: 950dbd3dcfd7c0849bb2f9ebf5482c54, type: 2}
+    - target: {fileID: 1813875788451698800, guid: b160429f0fd26554ba12035d65a27355, type: 3}
+      propertyPath: m_UpdateMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1813875788451698800, guid: b160429f0fd26554ba12035d65a27355, type: 3}
       propertyPath: m_CullingMode
       value: 0
