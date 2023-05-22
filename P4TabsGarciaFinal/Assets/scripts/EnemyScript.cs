@@ -11,9 +11,13 @@ public class EnemyScript : MonoBehaviour
     public float enemySpeed, dis;
     Vector3 startPos;
 
+    public Animator enemyAnim;
+    public Health health;
+    
+
     private NavMeshAgent navMeshAgent;
     //private Transform movePositionTransform;
-    
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -29,6 +33,12 @@ public class EnemyScript : MonoBehaviour
             chase();
         }
 
+        if (dis <= 2.0f)
+        {
+            enemyAnim.SetTrigger("Idle");
+            Attack();
+        }
+
         //navMeshAgent.destination = movePositionTransform.position;
     }
 
@@ -36,5 +46,13 @@ public class EnemyScript : MonoBehaviour
     {
         transform.LookAt(player);
         transform.Translate(0, 0, enemySpeed * Time.deltaTime);
+        enemyAnim.SetTrigger("Run");
+
+    }
+
+    void Attack()
+    {
+        enemyAnim.SetTrigger("Attack");
+        health.DealDamage(player.gameObject);
     }
 }
