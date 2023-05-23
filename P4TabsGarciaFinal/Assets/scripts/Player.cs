@@ -38,24 +38,24 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             playerAnim.SetTrigger("Run");
-            playerAnim.SetTrigger("Idle");
+            //playerAnim.SetTrigger("Idle");
             walking = true;
         }
         if (Input.GetKeyUp(KeyCode.W))
         {
-            playerAnim.SetTrigger("Run");
+            //playerAnim.SetTrigger("Run");
             playerAnim.SetTrigger("Idle");
             walking = false;
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
             playerAnim.SetTrigger("RunBack");
-            playerAnim.SetTrigger("Idle");
+            //playerAnim.SetTrigger("Idle");
             walking = true;
         }
         if (Input.GetKeyUp(KeyCode.S))
         {
-            playerAnim.SetTrigger("RunBack");
+            //playerAnim.SetTrigger("RunBack");
             playerAnim.SetTrigger("Idle");
             walking = false;
         }

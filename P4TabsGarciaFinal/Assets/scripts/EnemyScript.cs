@@ -33,9 +33,10 @@ public class EnemyScript : MonoBehaviour
             chase();
         }
 
-        if (dis <= 2.0f)
+        if (dis <= 4.0f)
         {
             enemyAnim.SetTrigger("Idle");
+            navMeshAgent.SetDestination(transform.position);
             Attack();
         }
 
@@ -52,7 +53,9 @@ public class EnemyScript : MonoBehaviour
 
     void Attack()
     {
+        
         enemyAnim.SetTrigger("Attack");
         health.DealDamage(player.gameObject);
+        
     }
 }
