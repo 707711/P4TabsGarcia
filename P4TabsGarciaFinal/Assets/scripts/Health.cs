@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,10 +27,29 @@ public class Health : MonoBehaviour
     {
         
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        DealDamage();
+        TakeDamage();
+
+    }
+
+    private void TakeDamage()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void DealDamage()
+    {
+        throw new NotImplementedException();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

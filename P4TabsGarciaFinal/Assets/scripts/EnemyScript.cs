@@ -35,7 +35,7 @@ public class EnemyScript : MonoBehaviour
 
         if (dis <= 4.0f)
         {
-            enemyAnim.SetTrigger("Idle");
+            enemyAnim.SetTrigger("Attack");
             navMeshAgent.SetDestination(transform.position);
             Attack();
         }

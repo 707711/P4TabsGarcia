@@ -75,11 +75,23 @@ public class Player : MonoBehaviour
         {
             Attack();
         }
+
+        //taking damage
+        //if ()
+        {
+
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        
     }
 
     void Attack()
     {
         playerAnim.SetTrigger("Attack");
         health.DealDamage(enemy.gameObject);
+        
     }
 }
