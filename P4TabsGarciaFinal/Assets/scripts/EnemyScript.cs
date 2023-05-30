@@ -13,6 +13,8 @@ public class EnemyScript : MonoBehaviour
 
     public Animator enemyAnim;
     public Health health;
+
+    Transform enemy;
     
 
     private NavMeshAgent navMeshAgent;
@@ -22,6 +24,7 @@ public class EnemyScript : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         startPos = transform.position;
+        
     }
 
     // Update is called once per frame
@@ -55,6 +58,13 @@ public class EnemyScript : MonoBehaviour
     {
         
         enemyAnim.SetTrigger("Attack");
+        
+        
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        GameObject.FindGameObjectsWithTag("player");
         health.DealDamage(player.gameObject);
         
     }

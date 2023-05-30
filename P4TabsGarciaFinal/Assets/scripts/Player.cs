@@ -85,13 +85,20 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        
+        health.DealDamage(enemy.gameObject);
     }
 
     void Attack()
     {
         playerAnim.SetTrigger("Attack");
-        health.DealDamage(enemy.gameObject);
+
+
+        //if(playerAnim)
+        //if (GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            //GetComponent<Health>().DealDamage();
+
+        }
         
     }
 }

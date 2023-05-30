@@ -7,10 +7,16 @@ public class Health : MonoBehaviour
 {
     public int health;
     public int attackDamage;
+    public bool alive = true;
 
     public void TakeDamage(int amount)
     {
         health -= amount;
+        
+        if(health <= 0)
+        {
+            Die();
+        }
     }
 
     public void DealDamage(GameObject target)
@@ -25,7 +31,7 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        alive = true;
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -49,7 +55,12 @@ public class Health : MonoBehaviour
     {
         if(health <= 0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
+    }
+
+    private void Die()
+    {
+        gameObject.SetActive(false);
     }
 }
