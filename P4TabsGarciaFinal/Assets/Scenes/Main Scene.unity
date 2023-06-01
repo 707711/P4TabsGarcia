@@ -2413,8 +2413,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.29117966, y: 1.3027444, z: 0.14509302}
-  m_Center: {x: -0.00022508505, y: 0.4403883, z: 0.000000023560771}
+  m_Size: {x: 0.29117966, y: 0.9371354, z: 0.14509302}
+  m_Center: {x: -0.0002254144, y: 0.6231924, z: -0.0000000046363935}
 --- !u!114 &417729243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2427,8 +2427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddf2676b6c45bf4ba12f9a70fed5e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 1379346854}
-  enemyHealth: {fileID: 1596961635}
   damage: 15
 --- !u!1001 &418247535
 PrefabInstance:
@@ -6928,11 +6926,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1349649287}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2911799, y: 1.3027455, z: 0.14509311}
-  m_Center: {x: -0.0002212312, y: 0.44038722, z: -0.00000092346073}
+  m_Size: {x: 0.2911799, y: 0.8549734, z: 0.14509311}
+  m_Center: {x: -0.0013342719, y: 0.6364804, z: -0.002377527}
 --- !u!114 &1349649295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6945,8 +6943,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddf2676b6c45bf4ba12f9a70fed5e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 1379346854}
-  enemyHealth: {fileID: 1596961635}
   damage: 7
 --- !u!4 &1349731112 stripped
 Transform:
@@ -9654,7 +9650,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5366828120873032746, guid: 239d715f37ae518458d4b1b2334cb6d0, type: 3}
       propertyPath: m_Name
-      value: Red Guy
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8383327660163553559, guid: 239d715f37ae518458d4b1b2334cb6d0, type: 3}
       propertyPath: m_RootOrder

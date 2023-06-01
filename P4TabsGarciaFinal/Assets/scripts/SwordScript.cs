@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SwordScript : MonoBehaviour
 {
-    public PlayerHealth playerHealth;
-    public EnemyHealth enemyHealth;
+    //public PlayerHealth playerHealth;
+    //public EnemyHealth enemyHealth;
 
     public int damage;
     // Start is called before the first frame update
@@ -20,16 +20,31 @@ public class SwordScript : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.collider.gameObject.tag == "Enemy")
+        PlayerHealth playerHealth = GetComponent<PlayerHealth>();
+        EnemyHealth enemyHealth = GetComponent<EnemyHealth>();
+
+        if (enemyHealth != null)
         {
-            collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
-        }
-        if (collision.collider.gameObject.tag == "Player")
-        {
-            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
+            enemyHealth.TakeDamage(damage);
+            Debug.Log("Enemy hit");
         }
 
+        if (playerHealth != null)
+        {
+            playerHealth.TakeDamage(damage);
+            Debug.Log("Player hit");
+        }
+
+    }
+
+    public void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.CompareTag("Enemy"))
+        {
+            FindObjectOfType<EnemyHealth>().TakeDamage(damage);
+            Debug.Log("Enemy hit");
+        }
     }
 }
