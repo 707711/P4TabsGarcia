@@ -25,6 +25,7 @@ public class Health : MonoBehaviour
         if(atm != null)
         {
             atm.TakeDamage(attackDamage);
+            Debug.Log("Damage dealth");
         }
     }
 
@@ -35,27 +36,19 @@ public class Health : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        DealDamage();
-        TakeDamage();
+        //DealDamage();
+        //TakeDamage();
 
     }
 
-    private void TakeDamage()
-    {
-        throw new NotImplementedException();
-    }
 
-    private void DealDamage()
-    {
-        throw new NotImplementedException();
-    }
 
     // Update is called once per frame
     void Update()
     {
         if(health <= 0)
         {
-            gameObject.SetActive(false);
+            Die();
         }
     }
 

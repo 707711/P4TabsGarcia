@@ -12,7 +12,7 @@ public class EnemyScript : MonoBehaviour
     Vector3 startPos;
 
     public Animator enemyAnim;
-    public Health health;
+    //public Health health;
 
     Transform enemy;
     
@@ -24,7 +24,8 @@ public class EnemyScript : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         startPos = transform.position;
-        
+
+        //health = GetComponent<Health>();
     }
 
     // Update is called once per frame
@@ -38,8 +39,8 @@ public class EnemyScript : MonoBehaviour
 
         if (dis <= 4.0f)
         {
-            enemyAnim.SetTrigger("Attack");
-            navMeshAgent.SetDestination(transform.position);
+            //enemyAnim.SetTrigger("Attack");
+            //navMeshAgent.SetDestination(transform.position);
             Attack();
         }
 
@@ -56,16 +57,16 @@ public class EnemyScript : MonoBehaviour
 
     void Attack()
     {
-        
         enemyAnim.SetTrigger("Attack");
-        
-        
+        //health.DealDamage(player.gameObject);
+
+
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        GameObject.FindGameObjectsWithTag("player");
-        health.DealDamage(player.gameObject);
+        //GameObject.FindGameObjectsWithTag("player");
+        //health.DealDamage(player.gameObject);
         
     }
 }

@@ -10,8 +10,9 @@ public class Player : MonoBehaviour
     public bool walking;
     public Transform playerTrans;
 
-    public Health health;
-    Transform enemy;
+    //public Health health;
+    //Transform enemy;
+    //public CapsuleCollider capCollider;
 
     void FixedUpdate()
     {
@@ -28,7 +29,9 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //health = GetComponent<Health>();
+        //capCollider = GetComponent<CapsuleCollider>();
+
     }
 
     // Update is called once per frame
@@ -76,29 +79,13 @@ public class Player : MonoBehaviour
             Attack();
         }
 
-        //taking damage
-        //if ()
-        {
-
-        }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        health.DealDamage(enemy.gameObject);
-    }
+    
 
     void Attack()
     {
         playerAnim.SetTrigger("Attack");
 
-
-        //if(playerAnim)
-        //if (GameObject.FindGameObjectsWithTag("Enemy"))
-        {
-            //GetComponent<Health>().DealDamage();
-
-        }
-        
     }
 }
